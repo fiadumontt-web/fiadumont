@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fiadumont - Inovação Digital de Excelência">
+    <title>Fiadumont — Leading Innovation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- WebGL Container -->
+    <div id="webgl-container"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="public/assets/logo.png" alt="Fiadumont" class="logo">
+            </div>
+            <div class="nav-menu">
+                <button class="nav-link active" data-section="home">
+                    <span data-pt="Início" data-en="Home">Início</span>
+                </button>
+                <button class="nav-link" data-section="portfolio">
+                    <span data-pt="Portfolio" data-en="Portfolio">Portfolio</span>
+                </button>
+                <button class="nav-link" data-section="sobre">
+                    <span data-pt="Sobre" data-en="About">Sobre</span>
+                </button>
+                <button class="nav-link" data-section="contato">
+                    <span data-pt="Contacto" data-en="Contact">Contacto</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section hero active">
+        <div class="hero-content">
+            <div class="hero-label">
+                <span data-pt="Inovação Digital" data-en="Digital Innovation">Inovação Digital</span>
+            </div>
+            <h1 class="hero-title">
+                <span data-pt="Criamos experiências" data-en="We create">Criamos</span><br>
+                <span data-pt="digitais extraordinárias" data-en="extraordinary digital experiences">experiências digitais</span><br>
+                <span class="gradient-text">
+                    <span data-pt="extraordinárias" data-en="extraordinary">extraordinárias</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">
+                <span data-pt="Transformamos ideias em soluções tecnológicas que impulsionam negócios." 
+                      data-en="We transform ideas into technological solutions that drive businesses.">
+                    Transformamos ideias em soluções tecnológicas que impulsionam negócios.
+                </span>
+            </p>
+            <div class="cta-group">
+                <button class="btn btn-primary" onclick="navigateToSection('portfolio')">
+                    <span data-pt="Explorar Projectos" data-en="Explore Projects">Explorar Projectos</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span data-pt="Projectos Seleccionados" data-en="Selected Projects">
+                        Projectos Seleccionados
+                    </span>
+                </h2>
+                <p class="section-description">
+                    <span data-pt="Soluções digitais inovadoras que combinam design excepcional com tecnologia de ponta." 
+                          data-en="Innovative digital solutions combining exceptional design with cutting-edge technology.">
+                        Soluções digitais inovadoras que combinam design excepcional com tecnologia de ponta.
+                    </span>
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-3d" id="project-1"></div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-name">TUKA</h3>
+                        <p class="portfolio-desc">
+                            <span data-pt="Editor profissional que permite adicionar logos instantaneamente às imagens dos produtos." 
+                                  data-en="Professional editor for instant logo integration on product images.">
+                                Editor profissional que permite adicionar logos instantaneamente às imagens dos produtos.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-3d" id="project-2"></div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-name">Investment Calculator</h3>
+                        <p class="portfolio-desc">
+                            <span data-pt="Ferramenta inteligente para planeamento financeiro com decisões baseadas em dados." 
+                                  data-en="Intelligent tool for financial planning with data-driven decisions.">
+                                Ferramenta inteligente para planeamento financeiro com decisões baseadas em dados.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-3d" id="project-3"></div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-name">PIXEL AI</h3>
+                        <p class="portfolio-desc">
+                            <span data-pt="Sistema avançado de animação para criação de conteúdo visual dinâmico." 
+                                  data-en="Advanced animation system for dynamic visual content creation.">
+                                Sistema avançado de animação para criação de conteúdo visual dinâmico.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-3d" id="project-4"></div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-name">Neural Flow</h3>
+                        <p class="portfolio-desc">
+                            <span data-pt="Plataforma que transforma dados complexos em insights claros e acionáveis." 
+                                  data-en="Platform transforming complex data into clear, actionable insights.">
+                                Plataforma que transforma dados complexos em insights claros e acionáveis.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="section about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">
+                    <span data-pt="Excelência Global" data-en="Global Excellence">
+                        Excelência Global
+                    </span>
+                </h2>
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        <span data-pt="Fundada em 2020, somos uma equipa de especialistas com vasta experiência internacional em países nórdicos." 
+                              data-en="Founded in 2020, we are a team of specialists with extensive international experience in Nordic countries.">
+                            Fundada em 2020, somos uma equipa de especialistas com vasta experiência internacional em países nórdicos.
+                        </span>
+                    </p>
+                    <p class="about-paragraph">
+                        <span data-pt="Trabalhamos com empresas líderes no sector tecnológico, combinando inovação, design e soluções digitais que geram resultados concretos." 
+                              data-en="We work with leading technology companies, combining innovation, design and digital solutions that generate concrete results.">
+                            Trabalhamos com empresas líderes no sector tecnológico, combinando inovação, design e soluções digitais que geram resultados concretos.
+                        </span>
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">2020</div>
+                        <div class="stat-label">
+                            <span data-pt="Fundada" data-en="Founded">Fundada</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Global</div>
+                        <div class="stat-label">
+                            <span data-pt="Alcance" data-en="Reach">Alcance</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">
+                            <span data-pt="Excelência" data-en="Excellence">Excelência</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">
+                    <span data-pt="Vamos Trabalhar Juntos" data-en="Let's Work Together">
+                        Vamos Trabalhar Juntos
+                    </span>
+                </h2>
+                <p class="section-description">
+                    <span data-pt="Pronto para transformar a sua visão em realidade digital?" 
+                          data-en="Ready to transform your vision into digital reality?">
+                        Pronto para transformar a sua visão em realidade digital?
+                    </span>
+                </p>
+
+                <div class="contact-grid">
+                    <a href="mailto:contato@fiadumont.com" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-value">contato@fiadumont.com</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="public/assets/logo.png" alt="Fiadumont" class="footer-logo">
+                    <p class="footer-text">
+                        <span data-pt="© 2024 Fiadumont. Todos os direitos reservados." 
+                              data-en="© 2024 Fiadumont. All rights reserved.">
+                            © 2024 Fiadumont. Todos os direitos reservados.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
