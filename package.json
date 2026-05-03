@@ -1,0 +1,20 @@
+{
+  "name": "fiadumont-website",
+  "version": "1.0.0",
+  "description": "Fiadumont - Leading Innovation in Digital Experiences",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "fiadumont",
+    "digital",
+    "innovation",
+    "3d",
+    "webgl",
+    "threejs"
+  ],
+  "author": "Fiadumont",
+  "license": "MIT"
+}
