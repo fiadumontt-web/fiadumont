@@ -1,5 +1,6 @@
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
+import './fonts.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { detectCapability } from './capability.js';
@@ -18,7 +19,9 @@ function initLanguage() {
 
 function setLanguage(lang) {
   document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    const on = btn.getAttribute('data-lang') === lang;
+    btn.classList.toggle('active', on);
+    btn.setAttribute('aria-pressed', String(on));
   });
   document.querySelectorAll('[data-pt][data-en]').forEach((el) => {
     el.textContent = el.getAttribute(`data-${lang}`);
@@ -49,8 +52,12 @@ window.navigateToSection = navigateToSection; // usado pelo botão do hero
 
 function initNavigation() {
   const links = document.querySelectorAll('.nav-link');
-  links.forEach((link) => {
-    link.addEventListener('click', () => navigateToSection(link.getAttribute('data-section')));
+  // Menu, logótipo e links do rodapé
+  document.querySelectorAll('[data-section]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigateToSection(el.getAttribute('data-section'));
+    });
   });
 
   const setActive = (id) =>
@@ -102,6 +109,8 @@ function initPortfolioLazy() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
   initLanguage();
   initNavigation();
   initHeroTransition();
