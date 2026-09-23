@@ -3,33 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fiadumont - Inovação Digital de Excelência">
-    <title>Fiadumont — Leading Innovation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <title>Fiadumont · Estúdio de inovação digital</title>
+    <meta name="description" content="Apps, sites e experiências 3D que abrem depressa, funcionam em qualquer telemóvel e fazem o cliente voltar. Fiadumont, estúdio de inovação digital em Łódź, Polónia.">
+    <meta name="theme-color" content="#0a0520">
+    <link rel="canonical" href="https://fiadumont.com/">
+
+    <!-- Ícones -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Partilha em redes sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fiadumont">
+    <meta property="og:title" content="Fiadumont · Estúdio de inovação digital">
+    <meta property="og:description" content="Da ideia ao produto que as pessoas querem usar. Apps, sites e experiências 3D para empresas na Europa e em África.">
+    <meta property="og:url" content="https://fiadumont.com/">
+    <meta property="og:image" content="https://fiadumont.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Dados estruturados para o Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Fiadumont",
+        "slogan": "Leading Innovation",
+        "url": "https://fiadumont.com/",
+        "logo": "https://fiadumont.com/assets/logo.png",
+        "email": "contato@fiadumont.com",
+        "foundingDate": "2020",
+        "address": { "@type": "PostalAddress", "addressLocality": "Łódź", "addressCountry": "PL" }
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles.css">
+    <script type="module" src="/src/main.js"></script>
 </head>
 <body>
-    <!-- Language Toggle -->
-    <div class="lang-toggle">
-        <button class="lang-btn active" data-lang="pt">PT</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-    </div>
+    <a class="skip-link" href="#conteudo">
+        <span data-pt="Saltar para o conteúdo" data-en="Skip to content">Saltar para o conteúdo</span>
+    </a>
 
     <!-- WebGL Container -->
-    <div id="webgl-container"></div>
+    <div id="webgl-container" aria-hidden="true"></div>
 
     <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="logo-container">
-                <img src="public/assets/logo.png" alt="Fiadumont" class="logo">
-            </div>
+    <header class="nav">
+        <nav class="nav-container" aria-label="Principal">
+            <a class="logo-container" href="#home" data-section="home" aria-label="Fiadumont, início">
+                <img src="/assets/logo.png" alt="Fiadumont · Leading Innovation" class="logo" width="1120" height="276">
+            </a>
             <div class="nav-menu">
                 <button class="nav-link active" data-section="home">
                     <span data-pt="Início" data-en="Home">Início</span>
+                </button>
+                <button class="nav-link" data-section="servicos">
+                    <span data-pt="Serviços" data-en="Services">Serviços</span>
                 </button>
                 <button class="nav-link" data-section="portfolio">
                     <span data-pt="Portfolio" data-en="Portfolio">Portfolio</span>
@@ -41,33 +75,116 @@
                     <span data-pt="Contacto" data-en="Contact">Contacto</span>
                 </button>
             </div>
-        </div>
-    </nav>
+            <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+                <button class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+        </nav>
+    </header>
 
+    <main id="conteudo">
     <!-- Home Section -->
-    <section id="home" class="section hero active">
+    <section id="home" class="section hero">
         <div class="hero-content">
             <div class="hero-label">
-                <span data-pt="Inovação Digital" data-en="Digital Innovation">Inovação Digital</span>
+                <span data-pt="Estúdio de inovação digital" data-en="Digital innovation studio">Estúdio de inovação digital</span>
             </div>
             <h1 class="hero-title">
-                <span data-pt="Criamos experiências" data-en="We create">Criamos</span><br>
-                <span data-pt="digitais extraordinárias" data-en="extraordinary digital experiences">experiências digitais</span><br>
+                <span data-pt="Da ideia ao produto" data-en="From idea to a product">Da ideia ao produto</span><br>
+                <span data-pt="que as pessoas" data-en="people actually">que as pessoas</span><br>
                 <span class="gradient-text">
-                    <span data-pt="extraordinárias" data-en="extraordinary">extraordinárias</span>
+                    <span data-pt="querem usar." data-en="want to use.">querem usar.</span>
                 </span>
             </h1>
             <p class="hero-subtitle">
-                <span data-pt="Transformamos ideias em soluções tecnológicas que impulsionam negócios." 
-                      data-en="We transform ideas into technological solutions that drive businesses.">
-                    Transformamos ideias em soluções tecnológicas que impulsionam negócios.
+                <span data-pt="Apps, sites e experiências 3D que abrem depressa, funcionam em qualquer telemóvel e fazem o cliente voltar. Para empresas na Europa e em África que querem ser lembradas."
+                      data-en="Apps, websites and 3D experiences that load fast, work on any phone and bring customers back. For companies in Europe and Africa that want to be remembered.">
+                    Apps, sites e experiências 3D que abrem depressa, funcionam em qualquer telemóvel e fazem o cliente voltar. Para empresas na Europa e em África que querem ser lembradas.
                 </span>
             </p>
             <div class="cta-group">
                 <button class="btn btn-primary" onclick="navigateToSection('portfolio')">
-                    <span data-pt="Explorar Projectos" data-en="Explore Projects">Explorar Projectos</span>
+                    <span data-pt="Ver o trabalho" data-en="See the work">Ver o trabalho</span>
+                </button>
+                <button class="btn btn-secondary" onclick="navigateToSection('contato')">
+                    <span data-pt="Começar um projecto" data-en="Start a project">Começar um projecto</span>
                 </button>
             </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span data-pt="Um só estúdio, do esboço ao lançamento" data-en="One studio, from sketch to launch">Um só estúdio, do esboço ao lançamento</span>
+                </h2>
+                <p class="section-description">
+                    <span data-pt="Estratégia, design, código e alojamento na mesma equipa. O projecto não passa de mão em mão e ninguém se perde entre fornecedores."
+                          data-en="Strategy, design, code and hosting under one roof. Your project never changes hands and nothing gets lost between vendors.">
+                        Estratégia, design, código e alojamento na mesma equipa. O projecto não passa de mão em mão e ninguém se perde entre fornecedores.
+                    </span>
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-number">01</div>
+                    <h3 class="service-name">
+                        <span data-pt="Apps web e mobile" data-en="Web and mobile apps">Apps web e mobile</span>
+                    </h3>
+                    <p class="service-desc">
+                        <span data-pt="Uma só base de código que corre no browser, funciona sem rede e chega à Google Play. Paga um desenvolvimento e ganha três canais."
+                              data-en="One codebase that runs in the browser, works offline and ships to Google Play. You pay for one build and get three channels.">
+                            Uma só base de código que corre no browser, funciona sem rede e chega à Google Play. Paga um desenvolvimento e ganha três canais.
+                        </span>
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-number">02</div>
+                    <h3 class="service-name">
+                        <span data-pt="Experiências 3D e interactivas" data-en="3D and interactive experiences">Experiências 3D e interactivas</span>
+                    </h3>
+                    <p class="service-desc">
+                        <span data-pt="O cliente experimenta antes de comprar. Cenas 3D, provadores virtuais e animações que abrem no browser, sem instalar nada."
+                              data-en="Customers try before they buy. 3D scenes, virtual try-ons and animations that open in the browser, with nothing to install.">
+                            O cliente experimenta antes de comprar. Cenas 3D, provadores virtuais e animações que abrem no browser, sem instalar nada.
+                        </span>
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-number">03</div>
+                    <h3 class="service-name">
+                        <span data-pt="Presença digital completa" data-en="Complete digital presence">Presença digital completa</span>
+                    </h3>
+                    <p class="service-desc">
+                        <span data-pt="Site, domínio, email profissional e redes sociais entregues prontos a usar. Recebe as chaves no fim; a parte técnica fica connosco."
+                              data-en="Website, domain, professional email and social channels delivered ready to use. You get the keys; we handle the technical side.">
+                            Site, domínio, email profissional e redes sociais entregues prontos a usar. Recebe as chaves no fim; a parte técnica fica connosco.
+                        </span>
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-number">04</div>
+                    <h3 class="service-name">
+                        <span data-pt="Vídeo e animação com IA" data-en="AI video and animation">Vídeo e animação com IA</span>
+                    </h3>
+                    <p class="service-desc">
+                        <span data-pt="Anúncios animados e conteúdo visual com a velocidade da IA e o critério de uma direcção criativa humana."
+                              data-en="Animated ads and visual content with the speed of AI and the judgement of human creative direction.">
+                            Anúncios animados e conteúdo visual com a velocidade da IA e o critério de uma direcção criativa humana.
+                        </span>
+                    </p>
+                </article>
+            </div>
+
+            <ul class="tech-list" aria-label="Tecnologias">
+                <li>React</li><li>Three.js</li><li>WebGL</li><li>PWA</li><li>Android (TWA)</li><li>Canvas API</li><li data-pt="IA no dispositivo" data-en="On-device AI">IA no dispositivo</li><li>Vercel</li><li>Cloudflare</li>
+            </ul>
         </div>
     </section>
 
@@ -76,66 +193,83 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
-                    <span data-pt="Projectos Seleccionados" data-en="Selected Projects">
-                        Projectos Seleccionados
-                    </span>
+                    <span data-pt="Provas, não promessas" data-en="Proof, not promises">Provas, não promessas</span>
                 </h2>
                 <p class="section-description">
-                    <span data-pt="Soluções digitais inovadoras que combinam design excepcional com tecnologia de ponta." 
-                          data-en="Innovative digital solutions combining exceptional design with cutting-edge technology.">
-                        Soluções digitais inovadoras que combinam design excepcional com tecnologia de ponta.
+                    <span data-pt="Produtos próprios em uso e projectos entregues a clientes. Cada um resolve um problema concreto, num mercado concreto."
+                          data-en="Our own products in use and projects delivered to clients. Each one solves a specific problem in a specific market.">
+                        Produtos próprios em uso e projectos entregues a clientes. Cada um resolve um problema concreto, num mercado concreto.
                     </span>
                 </p>
             </div>
 
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <a class="portfolio-item" href="https://tuka.fiadumont.com" target="_blank" rel="noopener">
                     <div class="portfolio-3d" id="project-1"></div>
                     <div class="portfolio-overlay">
+                        <div class="portfolio-tag">
+                            <span data-pt="Produto próprio · App" data-en="Own product · App">Produto próprio · App</span>
+                        </div>
                         <h3 class="portfolio-name">TUKA</h3>
                         <p class="portfolio-desc">
-                            <span data-pt="Editor profissional que permite adicionar logos instantaneamente às imagens dos produtos." 
-                                  data-en="Professional editor for instant logo integration on product images.">
-                                Editor profissional que permite adicionar logos instantaneamente às imagens dos produtos.
+                            <span data-pt="Fotos de produto com a marca, em segundos. Sem conta e sem uploads: as fotos nunca saem do telemóvel. Feito para pequenos negócios que vendem pelas redes sociais."
+                                  data-en="Branded product photos in seconds. No account, no uploads: photos never leave the phone. Built for small businesses that sell on social media.">
+                                Fotos de produto com a marca, em segundos. Sem conta e sem uploads: as fotos nunca saem do telemóvel. Feito para pequenos negócios que vendem pelas redes sociais.
                             </span>
                         </p>
+                        <span class="portfolio-link">tuka.fiadumont.com ↗</span>
                     </div>
-                </div>
+                </a>
 
-                <div class="portfolio-item">
+                <div class="portfolio-item" tabindex="0">
                     <div class="portfolio-3d" id="project-2"></div>
                     <div class="portfolio-overlay">
-                        <h3 class="portfolio-name">Investment Calculator</h3>
+                        <div class="portfolio-tag">
+                            <span data-pt="Produto próprio · Finanças" data-en="Own product · Finance">Produto próprio · Finanças</span>
+                        </div>
+                        <h3 class="portfolio-name">
+                            <span data-pt="Calculadora de investimento" data-en="Investment calculator">Calculadora de investimento</span>
+                        </h3>
                         <p class="portfolio-desc">
-                            <span data-pt="Ferramenta inteligente para planeamento financeiro com decisões baseadas em dados." 
-                                  data-en="Intelligent tool for financial planning with data-driven decisions.">
-                                Ferramenta inteligente para planeamento financeiro com decisões baseadas em dados.
+                            <span data-pt="Quanto rende, de facto, o seu dinheiro em Angola? A calculadora cruza taxas do BNA, inflação do INE e impostos locais e responde em segundos, com relatório em PDF."
+                                  data-en="How much does your money really earn in Angola? The calculator combines BNA rates, INE inflation and local taxes and answers in seconds, with a PDF report.">
+                                Quanto rende, de facto, o seu dinheiro em Angola? A calculadora cruza taxas do BNA, inflação do INE e impostos locais e responde em segundos, com relatório em PDF.
                             </span>
                         </p>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
+                <div class="portfolio-item" tabindex="0">
                     <div class="portfolio-3d" id="project-3"></div>
                     <div class="portfolio-overlay">
-                        <h3 class="portfolio-name">PIXEL AI</h3>
+                        <div class="portfolio-tag">
+                            <span data-pt="Cliente · Arquitectura" data-en="Client · Architecture">Cliente · Arquitectura</span>
+                        </div>
+                        <h3 class="portfolio-name">
+                            <span data-pt="Presença digital de um estúdio de arquitectura" data-en="Digital presence for an architecture firm">Presença digital de um estúdio de arquitectura</span>
+                        </h3>
                         <p class="portfolio-desc">
-                            <span data-pt="Sistema avançado de animação para criação de conteúdo visual dinâmico." 
-                                  data-en="Advanced animation system for dynamic visual content creation.">
-                                Sistema avançado de animação para criação de conteúdo visual dinâmico.
+                            <span data-pt="Site, domínio, email profissional e quatro redes sociais para uma empresa de arquitectura e construção em Angola. Um só parceiro para toda a parte digital."
+                                  data-en="Website, domain, professional email and four social channels for an architecture and construction company in Angola. One partner for everything digital.">
+                                Site, domínio, email profissional e quatro redes sociais para uma empresa de arquitectura e construção em Angola. Um só parceiro para toda a parte digital.
                             </span>
                         </p>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
+                <div class="portfolio-item" tabindex="0">
                     <div class="portfolio-3d" id="project-4"></div>
                     <div class="portfolio-overlay">
-                        <h3 class="portfolio-name">Neural Flow</h3>
+                        <div class="portfolio-tag">
+                            <span data-pt="Cliente · Óptica" data-en="Client · Eyewear">Cliente · Óptica</span>
+                        </div>
+                        <h3 class="portfolio-name">
+                            <span data-pt="Provador virtual de óculos" data-en="Virtual eyewear try-on">Provador virtual de óculos</span>
+                        </h3>
                         <p class="portfolio-desc">
-                            <span data-pt="Plataforma que transforma dados complexos em insights claros e acionáveis." 
-                                  data-en="Platform transforming complex data into clear, actionable insights.">
-                                Plataforma que transforma dados complexos em insights claros e acionáveis.
+                            <span data-pt="Experimentar óculos sem sair do sofá. O cliente usa a câmara do próprio dispositivo e vê o modelo no rosto antes de comprar."
+                                  data-en="Trying on glasses from the sofa. Customers use their own device camera and see the frames on their face before buying.">
+                                Experimentar óculos sem sair do sofá. O cliente usa a câmara do próprio dispositivo e vê o modelo no rosto antes de comprar.
                             </span>
                         </p>
                     </div>
@@ -149,21 +283,19 @@
         <div class="container">
             <div class="about-content">
                 <h2 class="section-title">
-                    <span data-pt="Excelência Global" data-en="Global Excellence">
-                        Excelência Global
-                    </span>
+                    <span data-pt="Rigor de banco, criatividade de estúdio" data-en="Bank-grade rigour, studio creativity">Rigor de banco, criatividade de estúdio</span>
                 </h2>
                 <div class="about-text">
                     <p class="about-paragraph">
-                        <span data-pt="Fundada em 2020, somos uma equipa de especialistas com vasta experiência internacional em países nórdicos." 
-                              data-en="Founded in 2020, we are a team of specialists with extensive international experience in Nordic countries.">
-                            Fundada em 2020, somos uma equipa de especialistas com vasta experiência internacional em países nórdicos.
+                        <span data-pt="A Fiadumont é um estúdio de inovação digital fundado em 2020, em Łódź, na Polónia. Partimos de uma convicção: tecnologia de nível europeu não deve ser exclusivo das grandes empresas."
+                              data-en="Fiadumont is a digital innovation studio founded in 2020 in Łódź, Poland. We start from one conviction: European-grade technology should not be reserved for large companies.">
+                            A Fiadumont é um estúdio de inovação digital fundado em 2020, em Łódź, na Polónia. Partimos de uma convicção: tecnologia de nível europeu não deve ser exclusivo das grandes empresas.
                         </span>
                     </p>
                     <p class="about-paragraph">
-                        <span data-pt="Trabalhamos com empresas líderes no sector tecnológico, combinando inovação, design e soluções digitais que geram resultados concretos." 
-                              data-en="We work with leading technology companies, combining innovation, design and digital solutions that generate concrete results.">
-                            Trabalhamos com empresas líderes no sector tecnológico, combinando inovação, design e soluções digitais que geram resultados concretos.
+                        <span data-pt="A nossa escola é o sector financeiro nórdico, onde um sistema parado custa dinheiro e confiança. Daí vem o método: testar antes de lançar, proteger os dados por defeito e planear para que nada pare. Juntamos esse rigor ao design e entregamos produtos bonitos que aguentam o dia a dia."
+                              data-en="Our training ground is the Nordic financial sector, where a system outage costs money and trust. That is where our method comes from: test before launch, protect data by default and plan so nothing stops. We pair that rigour with design and deliver products that look good and hold up every day.">
+                            A nossa escola é o sector financeiro nórdico, onde um sistema parado custa dinheiro e confiança. Daí vem o método: testar antes de lançar, proteger os dados por defeito e planear para que nada pare. Juntamos esse rigor ao design e entregamos produtos bonitos que aguentam o dia a dia.
                         </span>
                     </p>
                 </div>
@@ -176,17 +308,41 @@
                         </div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">Global</div>
+                        <div class="stat-number">3</div>
                         <div class="stat-label">
-                            <span data-pt="Alcance" data-en="Reach">Alcance</span>
+                            <span data-pt="Línguas · PT EN PL" data-en="Languages · PT EN PL">Línguas · PT EN PL</span>
                         </div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">100%</div>
+                        <div class="stat-number">UE</div>
                         <div class="stat-label">
-                            <span data-pt="Excelência" data-en="Excellence">Excelência</span>
+                            <span data-pt="Base na Polónia" data-en="Based in Poland">Base na Polónia</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="principles">
+                    <h3 class="principles-title">
+                        <span data-pt="Quatro passos, zero surpresas" data-en="Four steps, no surprises">Quatro passos, zero surpresas</span>
+                    </h3>
+                    <ol class="process-list">
+                        <li>
+                            <strong data-pt="Descoberta" data-en="Discovery">Descoberta</strong>
+                            <span data-pt="Antes de desenhar, ouvimos. Saímos da primeira conversa com o problema, o público e a meta definidos." data-en="We listen before we design. The first conversation ends with the problem, the audience and the goal defined.">Antes de desenhar, ouvimos. Saímos da primeira conversa com o problema, o público e a meta definidos.</span>
+                        </li>
+                        <li>
+                            <strong data-pt="Design e protótipo" data-en="Design and prototype">Design e protótipo</strong>
+                            <span data-pt="Cedo no processo, tem nas mãos uma versão clicável. Decide com base no que vê, não no que imagina." data-en="Early on, you hold a clickable version. You decide based on what you see, not what you imagine.">Cedo no processo, tem nas mãos uma versão clicável. Decide com base no que vê, não no que imagina.</span>
+                        </li>
+                        <li>
+                            <strong data-pt="Desenvolvimento" data-en="Development">Desenvolvimento</strong>
+                            <span data-pt="Código testado, rápido em telemóveis modestos e com privacidade desde a primeira linha." data-en="Tested code, fast on modest phones and private from the first line.">Código testado, rápido em telemóveis modestos e com privacidade desde a primeira linha.</span>
+                        </li>
+                        <li>
+                            <strong data-pt="Lançamento e acompanhamento" data-en="Launch and support">Lançamento e acompanhamento</strong>
+                            <span data-pt="Publicamos, medimos e melhoramos. O projecto não acaba no dia da entrega." data-en="We ship, measure and improve. The project does not end on delivery day.">Publicamos, medimos e melhoramos. O projecto não acaba no dia da entrega.</span>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -197,49 +353,63 @@
         <div class="container">
             <div class="contact-content">
                 <h2 class="section-title">
-                    <span data-pt="Vamos Trabalhar Juntos" data-en="Let's Work Together">
-                        Vamos Trabalhar Juntos
-                    </span>
+                    <span data-pt="Tem uma ideia? Nós ajudamos a levá-la ao mundo." data-en="Got an idea? We help you take it to the world.">Tem uma ideia? Nós ajudamos a levá-la ao mundo.</span>
                 </h2>
                 <p class="section-description">
-                    <span data-pt="Pronto para transformar a sua visão em realidade digital?" 
-                          data-en="Ready to transform your vision into digital reality?">
-                        Pronto para transformar a sua visão em realidade digital?
+                    <span data-pt="Envie-nos duas linhas sobre o que quer construir. Respondemos com as perguntas certas e uma proposta de próximos passos, sem compromisso."
+                          data-en="Send us two lines about what you want to build. We reply with the right questions and a proposal for next steps, with no commitment.">
+                        Envie-nos duas linhas sobre o que quer construir. Respondemos com as perguntas certas e uma proposta de próximos passos, sem compromisso.
                     </span>
                 </p>
 
                 <div class="contact-grid">
                     <a href="mailto:contato@fiadumont.com" class="contact-card">
-                        <div class="contact-icon">
+                        <div class="contact-icon" aria-hidden="true">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                 <polyline points="22,6 12,13 2,6"/>
                             </svg>
                         </div>
                         <div class="contact-value">contato@fiadumont.com</div>
+                        <div class="contact-note">
+                            <span data-pt="Português · English · Polski" data-en="Português · English · Polski">Português · English · Polski</span>
+                        </div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="public/assets/logo.png" alt="Fiadumont" class="footer-logo">
+                    <img src="/assets/logo.png" alt="Fiadumont" class="footer-logo" width="1120" height="276" loading="lazy">
                     <p class="footer-text">
-                        <span data-pt="© 2024 Fiadumont. Todos os direitos reservados." 
-                              data-en="© 2024 Fiadumont. All rights reserved.">
-                            © 2024 Fiadumont. Todos os direitos reservados.
-                        </span>
+                        <span data-pt="Da ideia ao produto que as pessoas querem usar." data-en="From idea to a product people actually want to use.">Da ideia ao produto que as pessoas querem usar.</span><br>
+                        Łódź, <span data-pt="Polónia" data-en="Poland">Polónia</span>
                     </p>
                 </div>
+                <div class="footer-col">
+                    <div class="footer-heading"><span data-pt="Navegação" data-en="Navigation">Navegação</span></div>
+                    <button class="footer-link" data-section="servicos"><span data-pt="Serviços" data-en="Services">Serviços</span></button>
+                    <button class="footer-link" data-section="portfolio"><span data-pt="Portfolio" data-en="Portfolio">Portfolio</span></button>
+                    <button class="footer-link" data-section="sobre"><span data-pt="Sobre" data-en="About">Sobre</span></button>
+                    <button class="footer-link" data-section="contato"><span data-pt="Contacto" data-en="Contact">Contacto</span></button>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-heading"><span data-pt="Contacto" data-en="Contact">Contacto</span></div>
+                    <a class="footer-link" href="mailto:contato@fiadumont.com">contato@fiadumont.com</a>
+                    <a class="footer-link" href="/privacidade.html"><span data-pt="Política de privacidade" data-en="Privacy policy">Política de privacidade</span></a>
+                </div>
             </div>
+            <p class="footer-copy">
+                © <span id="year">2026</span> Fiadumont.
+                <span data-pt="Todos os direitos reservados." data-en="All rights reserved.">Todos os direitos reservados.</span>
+            </p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

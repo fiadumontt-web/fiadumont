@@ -21,16 +21,31 @@ Website corporativo premium com design minimalista e efeitos 3D impressionantes.
 ## 📁 Estrutura
 
 ```
-fiadumont-final/
-├── index.html          # HTML limpo e elegante
-├── styles.css          # Estilos minimalistas
-├── script.js           # Animações 3D
-├── deploy.sh           # Script deploy Mac/Linux
-├── deploy.bat          # Script deploy Windows
-└── public/
-    └── assets/
-        └── logo.png    # Logo transparente
+index.html            Página principal
+privacidade.html      Política de privacidade (PT e EN)
+404.html              Página de erro
+styles.css            Estilos
+src/main.js           Idioma, navegação, scroll suave, transições
+src/hero/             Cena 3D do hero (React Three Fiber)
+src/portfolio3d.js    Animações 3D dos cartões do portfolio
+src/capability.js     Decide entre cena 3D e fundo estático
+src/fonts.css         Tipo de letra Inter alojado no site
+public/               Ficheiros copiados tal como estão (logo, ícones, og-image, robots, sitemap)
+vercel.json           Build e cache no Vercel
 ```
+
+## Desenvolvimento
+
+Requer Node 20.19 ou superior (ver `.nvmrc`) e npm.
+
+```bash
+npm install
+npm run dev      # servidor local com Vite
+npm run build    # gera a pasta dist/
+npm run preview  # serve a pasta dist/
+```
+
+Para ver o fallback estático do hero, abre o site com `?static` no URL.
 
 ## 🚀 Deploy Rápido
 
