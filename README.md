@@ -32,6 +32,19 @@ fiadumont-final/
         └── logo.png    # Logo transparente
 ```
 
+## Desenvolvimento
+
+Requer Node 20.19 ou superior (ver `.nvmrc`) e npm.
+
+```bash
+npm install
+npm run dev      # servidor local com Vite
+npm run build    # gera a pasta dist/
+npm run preview  # serve a pasta dist/
+```
+
+Para ver o fallback estático do hero, abre o site com `?static` no URL.
+
 ## 🚀 Deploy Rápido
 
 ### Windows
